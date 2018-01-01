@@ -48,7 +48,7 @@ const IndexPage = () => (
         <iframe
           width="auto"
           height="auto"
-          src="https://www.youtube.com/embed/skw1ERNbkls?rel=0&amp;showinfo=0"
+          src="https://www.youtube.com/embed/skw1ERNbkls?rel=0&amp;showinfo=0&amp;start=15"
           frameBorder="0"
           allowFullScreen
         />
