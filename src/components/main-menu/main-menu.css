@@ -3,6 +3,10 @@
   float: right;
 }
 
-.main-menu-wrapper .nav-pills > li > a {
+.nav-pills > li > a {
   color: white;
+}
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+  color: #081b30;
 }
