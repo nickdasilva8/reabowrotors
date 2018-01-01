@@ -21,7 +21,10 @@ const IndexPage = () => (
         mollit anim id est laborum.
       </p>
     </BootstrapContainer>
-    <BootstrapContainer className="second-box" id="videos">
+    <BootstrapContainer
+      className="second-box"
+      backgroundImage={false}
+      id="videos">
       <Col sm={12} md={4}>
         <h1>Videos</h1>
         <p>Something something here are some videos, something something.</p>
@@ -36,10 +39,8 @@ const IndexPage = () => (
           width="auto"
           height="auto"
           src="https://www.youtube.com/embed/EBTg6qX1WMk?rel=0&amp;showinfo=0"
-          frameborder="0"
-          gesture="media"
-          allow="encrypted-media"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         />
       </Col>
       <Col sm={12} md={4}>
@@ -48,12 +49,22 @@ const IndexPage = () => (
           width="auto"
           height="auto"
           src="https://www.youtube.com/embed/skw1ERNbkls?rel=0&amp;showinfo=0"
-          frameborder="0"
-          gesture="media"
-          allow="encrypted-media"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         />
       </Col>
+    </BootstrapContainer>
+    <BootstrapContainer
+      className="third-box"
+      backgroundImage={false}
+      id="gallery">
+      The gallery Section
+    </BootstrapContainer>
+    <BootstrapContainer
+      className="third-box"
+      backgroundImage={false}
+      id="gallery">
+      The footer? This needs to be its own component.
     </BootstrapContainer>
   </div>
 );
