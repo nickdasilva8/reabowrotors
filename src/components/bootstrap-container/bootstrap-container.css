@@ -1,0 +1,27 @@
+.container h1 {
+  color: #05331d;
+}
+
+.container {
+  padding: 30px 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content-wrapper .overlay {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.first-box {
+  background-image: url('./../assets/images/aaron-burden.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.second-box {
+  background: #eee;
+}
+
+.second-box h2 {
+  color: #05331d;
+}

@@ -1,0 +1,8 @@
+.main-menu-wrapper {
+  padding: 30px 0;
+  float: right;
+}
+
+.main-menu-wrapper .nav-pills > li > a {
+  color: white;
+}
