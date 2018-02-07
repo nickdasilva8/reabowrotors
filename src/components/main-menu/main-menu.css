@@ -3,6 +3,14 @@
   float: right;
 }
 
+.nav-pills > li {
+  padding: 0 8px;
+}
+
+.nav-pills > li:last-child {
+  padding: 0;
+}
+
 .nav-pills > li > a {
   color: white;
   -o-transition: 0.5s;

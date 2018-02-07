@@ -8,7 +8,7 @@ import BootstrapContainer from './../bootstrap-container/';
 export default class Header extends React.Component {
   render() {
     // these are the times in your menu
-    const menuItems = ['Home', 'About', 'Videos', 'Gallery', 'Contact'];
+    const menuItems = ['Home', 'About', 'Videos'];
 
     return (
       <BootstrapContainer className="header-wrapper">
