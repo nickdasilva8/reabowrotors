@@ -9,9 +9,22 @@ export default class MainMenu extends React.Component {
       return (
         <li key={index} role="presentation">
           {menuItem === 'Home' ? (
-            <a href={'/'}>{menuItem}</a>
+            <a id={`${menuItem.toLowerCase()}-menu-item`} href={'/'}>
+              {menuItem}
+              <div
+                style={{
+                  backgroundImage: `url(./static/${menuItem.toLowerCase()}-background.jpg)`,
+                  height: '50px;'
+                }}
+              />
+            </a>
           ) : (
-            <a href={`#${menuItem.toLowerCase()}`}>{menuItem}</a>
+            <a
+              id={`${menuItem.toLowerCase()}-menu-item`}
+              href={`#${menuItem.toLowerCase()}`}>
+              {menuItem}
+              <div />
+            </a>
           )}
         </li>
       );
@@ -19,7 +32,7 @@ export default class MainMenu extends React.Component {
 
     return (
       <div className="main-menu-wrapper">
-        <ul className="nav nav-pills">{menu}</ul>
+        <ul className="nav nav-pills nav-stacked">{menu}</ul>
       </div>
     );
   }

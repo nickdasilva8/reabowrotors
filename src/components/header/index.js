@@ -25,9 +25,7 @@ export default class Header extends React.Component {
               </Link>
             </h1>
           </Col>
-          <Col md={7}>
-            <MainMenu menuItems={menuItems} />
-          </Col>
+          <Col md={7} />
         </Row>
       </BootstrapContainer>
     );

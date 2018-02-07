@@ -1,72 +1,42 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+
+// components
 import BootstrapContainer from './../components/bootstrap-container';
-import { Col } from 'react-bootstrap';
+import MainMenu from './../components/main-menu/';
 
-const IndexPage = () => (
-  <div>
-    <BootstrapContainer className="first-box" backgroundImage={true} id="about">
-      <h1>Content? What content? This is the about section!</h1>
-      <p>
-        As you can see, I don't really have enough information to put on my
-        website. So I should spend an hour or two thinking about what kind of
-        information I want on my landing page.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-    </BootstrapContainer>
-    <BootstrapContainer
-      className="second-box"
-      backgroundImage={false}
-      id="videos">
-      <Col sm={12} md={4}>
-        <h1>Videos</h1>
-        <p>Something something here are some videos, something something.</p>
-        <p>
-          See my YouTube channel for more videos.{' '}
-          <a href="https://www.youtube.com/c/jaredreabow">Click here</a>
-        </p>
-      </Col>
-      <Col sm={12} md={4}>
-        <h2>Drone chases car</h2>
-        <iframe
-          width="auto"
-          height="auto"
-          src="https://www.youtube.com/embed/EBTg6qX1WMk?rel=0&amp;showinfo=0"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </Col>
-      <Col sm={12} md={4}>
-        <h2>A glorious sunset</h2>
-        <iframe
-          width="auto"
-          height="auto"
-          src="https://www.youtube.com/embed/skw1ERNbkls?rel=0&amp;showinfo=0&amp;start=15"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </Col>
-    </BootstrapContainer>
-    <BootstrapContainer
-      className="third-box"
-      backgroundImage={false}
-      id="gallery">
-      The gallery Section
-    </BootstrapContainer>
-    <BootstrapContainer
-      className="third-box"
-      backgroundImage={false}
-      id="gallery">
-      The footer? This needs to be its own component.
-    </BootstrapContainer>
-  </div>
-);
+export default class IndexPage extends React.Component {
+  render() {
+    // builds all the items inside the <li>'s of menu
+    // doesn't handle 'active' tab yet.
 
-export default IndexPage;
+    const menuItems = ['Home', 'About', 'Videos', 'Gallery', 'Contact'];
+
+    return (
+      <div>
+        <BootstrapContainer
+          className="first-box"
+          backgroundImage={true}
+          id="about">
+          <h1>Content? What content? This is the about section!</h1>
+          <Row>
+            <Col sm={12} md={2}>
+              <MainMenu menuItems={menuItems} />
+            </Col>
+            <Col sm={12} md={10}>
+              <div>
+                <span>row one</span>
+              </div>
+              <div>
+                <span>row two</span>
+              </div>
+              <div>
+                <span>row three</span>
+              </div>
+            </Col>
+          </Row>
+        </BootstrapContainer>
+      </div>
+    );
+  }
+}
